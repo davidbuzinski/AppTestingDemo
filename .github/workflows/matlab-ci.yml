@@ -13,11 +13,14 @@ on:
   schedule:
     - cron:  '55/61 20/25 * * *' # schedule a daily-ish build
 
+env:
+  MW_MATLAB_BUILDTOOL_DEFAULT_PLUGINS_FCN_OVERRIDE: matlab.ciplugins.github.getDefaultPlugins
+
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: self-hosted 
 
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -73,7 +76,3 @@ jobs:
         with:
           name: Test Results
           path: test-results.pdf
-                    
-
-
-                    
