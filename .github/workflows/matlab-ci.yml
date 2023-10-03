@@ -43,7 +43,7 @@ jobs:
 
     
       - name: Produce MD from MLX
-        uses: davidbuzinski/run-build@master
+        uses: davidbuzinski/run-build@main
         with:
           tasks: markdown jupyter
       
@@ -65,7 +65,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run all tests
         continue-on-error: true
-        uses: davidbuzinski/run-build@master
+        uses: davidbuzinski/run-build@main
         with:
           tasks: test
 
