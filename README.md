@@ -10,5 +10,6 @@ This is a simple demo of the App Testing Framework, highlighting usage on GitHub
 penny
 ```
 
-<center><img src="README_media/figure_0.png" width="585" alt="figure_0.png"></center>
-
+```TextOutput
+Unrecognized function or variable 'penny'.
+```
