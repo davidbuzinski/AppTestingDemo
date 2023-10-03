@@ -13,9 +13,6 @@ on:
   schedule:
     - cron:  '55/61 20/25 * * *' # schedule a daily-ish build
 
-env:
-  MW_MATLAB_BUILDTOOL_DEFAULT_PLUGINS_FCN_OVERRIDE: matlab.ciplugins.github.getDefaultPlugins
-
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -46,7 +43,7 @@ jobs:
 
     
       - name: Produce MD from MLX
-        uses: matlab-actions/run-build@v1
+        uses: davidbuzinski/run-build@master
         with:
           tasks: markdown jupyter
       
@@ -68,7 +65,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run all tests
         continue-on-error: true
-        uses: matlab-actions/run-build@v1
+        uses: davidbuzinski/run-build@master
         with:
           tasks: test
 
