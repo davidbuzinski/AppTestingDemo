@@ -37,8 +37,9 @@ jobs:
             **/*.md
             sample_media
             README_media
-          key: buildtool-cache-${{ matrix.os }}
-
+            mdOutputs.txt
+          key: buildtool-cache
+          
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
