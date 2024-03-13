@@ -34,10 +34,14 @@ jobs:
           key: buildtool-cache
           paths:
             - .buildtool
-            - sample.ipynb
             - sample.md
+            - sample.ipynb
             - sample.mlx
             - sample_media
+            - README.md
+            - README.ipynb
+            - README.mlx
+            - README_media
           
 workflows:
   tests-on-all-platforms:
