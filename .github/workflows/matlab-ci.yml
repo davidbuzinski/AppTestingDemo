@@ -36,6 +36,7 @@ jobs:
             **/*.ipynb
             **/*.md
             sample_media
+            README_media
           key: buildtool-cache
 
       - name: Setup MATLAB
