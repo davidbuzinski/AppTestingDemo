@@ -25,13 +25,13 @@ jobs:
       - matlab/install
       - restore_cache:
           keys:
-            - buildtool-cache
+            - buildtool-cache-{{ parameters.os }}
       - matlab/run-build:
           tasks: markdown jupyter
       - matlab/run-build:
           tasks: test
       - save_cache:
-          key: buildtool-cache
+          key: buildtool-cache-{{ parameters.os }}
           paths:
             - .buildtool
             - sample.md
