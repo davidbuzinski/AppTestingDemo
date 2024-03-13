@@ -25,7 +25,7 @@ jobs:
       - matlab/install
       - restore_cache:
           keys:
-            - buildtool-cache-new 
+            - buildtool-cache-<< parameters.os >>  
       - matlab/run-build:
           tasks: markdown jupyter
       - matlab/run-build:
