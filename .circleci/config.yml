@@ -31,7 +31,7 @@ jobs:
       - matlab/run-build:
           tasks: test
       - save_cache:
-          key: buildtool-cache-new
+          key: buildtool-cache-<< parameters.os >> 
           paths:
             - .buildtool
             - sample.md
