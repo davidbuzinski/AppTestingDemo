@@ -23,7 +23,7 @@ jobs:
     steps:
       - checkout
       - matlab/install
-      - resore_cache:
+      - restore_cache:
           keys:
             - buildtool-cache
       - matlab/run-build:
