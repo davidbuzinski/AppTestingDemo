@@ -23,10 +23,21 @@ jobs:
     steps:
       - checkout
       - matlab/install
+      - resore_cache:
+          keys:
+            - buildtool-cache
       - matlab/run-build:
           tasks: markdown jupyter
       - matlab/run-build:
           tasks: test
+      - save_cache:
+          key: buildtool-cache
+          paths:
+            - .buildtool
+            - sample.ipynb
+            - sample.md
+            - sample.mlx
+            - sample_media
           
 workflows:
   tests-on-all-platforms:
