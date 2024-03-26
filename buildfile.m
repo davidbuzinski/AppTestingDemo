@@ -4,7 +4,8 @@ import matlab.buildtool.tasks.*;
 plan = buildplan(localfunctions);
 
 plan("clean") = CleanTask;
-plan("test") = TestTask(TestResults=["test-results.pdf", "test-results.mat"]);
+% plan("test") = TestTask(TestResults=["test-results.pdf", "test-results.mat"]);
+plan("test") = TestTask();
 
 plan("markdown").Inputs = "**/*.mlx";
 plan("markdown").Outputs = replace(plan("markdown").Inputs, ".mlx",".md");
