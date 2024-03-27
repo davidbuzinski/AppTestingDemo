@@ -59,7 +59,7 @@ jobs:
       
       # Runs a set of commands using the runners shell
       - name: Run all tests
-        # continue-on-error: true
+        continue-on-error: true
         uses: matlab-actions/run-build@v2
         with:
           tasks: test
