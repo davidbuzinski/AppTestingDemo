@@ -11,8 +11,8 @@ on:
     branches: [ main ]
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
-env:
-  MW_CONNECTOR_CONNECTION_PROFILES: noop
+# env:
+#   MW_CONNECTOR_CONNECTION_PROFILES: noop
     
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
           key: buildtool-cache-${{ matrix.platform }}
           
       - name: Setup MATLAB
-        uses: matlab-actions/setup-matlab@v2
+        uses: davidbuzinski/setup-matlab@main
         with:
           cache: true
 
