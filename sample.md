@@ -1,4 +1,3 @@
-
 # A script with some output
 
 Let's see some live script output
@@ -21,9 +20,11 @@ a = 10x10
     10    12    94    96    78    35    37    44    46    53
     11    18   100    77    84    36    43    50    27    59
 
+
 ```
 
 ```matlab
+
 
 surf(peaks)
 ```
